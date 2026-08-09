@@ -1,50 +1,215 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      width="1200"
-     height="650"
-     viewBox="0 0 1200 650">
+     height="720"
+     viewBox="0 0 1200 720">
 
   <defs>
 
-    <!-- Background -->
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#070B14"/>
-      <stop offset="50%" stop-color="#10182B"/>
-      <stop offset="100%" stop-color="#080B12"/>
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <linearGradient id="background"
+                    x1="0"
+                    y1="0"
+                    x2="1"
+                    y2="1">
+
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="55%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF6FF"/>
+
     </linearGradient>
 
-    <!-- Name -->
-    <linearGradient id="nameGradient" x1="0" x2="1">
-      <stop offset="0%" stop-color="#61DAFB"/>
-      <stop offset="50%" stop-color="#8B5CF6"/>
-      <stop offset="100%" stop-color="#EC4899"/>
+
+    <!-- =====================================================
+         NAME GRADIENT
+    ====================================================== -->
+
+    <linearGradient id="nameGradient"
+                    x1="0"
+                    y1="0"
+                    x2="1"
+                    y2="0">
+
+      <stop offset="0%" stop-color="#2563EB"/>
+
+      <stop offset="50%" stop-color="#4F46E5"/>
+
+      <stop offset="100%" stop-color="#7C3AED"/>
+
     </linearGradient>
 
-    <!-- Card -->
-    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#172033"/>
-      <stop offset="100%" stop-color="#0D1320"/>
+
+    <!-- =====================================================
+         CYAN / BLUE GRADIENT
+    ====================================================== -->
+
+    <linearGradient id="blueGradient"
+                    x1="0"
+                    y1="0"
+                    x2="1"
+                    y2="1">
+
+      <stop offset="0%" stop-color="#06B6D4"/>
+
+      <stop offset="50%" stop-color="#2563EB"/>
+
+      <stop offset="100%" stop-color="#7C3AED"/>
+
     </linearGradient>
 
-    <!-- Scanner -->
-    <linearGradient id="scanner">
-      <stop offset="0%" stop-color="#61DAFB" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#61DAFB" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#61DAFB" stop-opacity="0"/>
+
+    <!-- =====================================================
+         CARD GRADIENT
+    ====================================================== -->
+
+    <linearGradient id="cardGradient"
+                    x1="0"
+                    y1="0"
+                    x2="1"
+                    y2="1">
+
+      <stop offset="0%" stop-color="#FFFFFF"/>
+
+      <stop offset="100%" stop-color="#F8FAFC"/>
+
     </linearGradient>
 
-    <!-- Glow -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+
+    <!-- =====================================================
+         QUOTE GRADIENT
+    ====================================================== -->
+
+    <linearGradient id="quoteGradient"
+                    x1="0"
+                    y1="0"
+                    x2="1"
+                    y2="0">
+
+      <stop offset="0%" stop-color="#EFF6FF"/>
+
+      <stop offset="50%" stop-color="#F5F3FF"/>
+
+      <stop offset="100%" stop-color="#ECFEFF"/>
+
+    </linearGradient>
+
+
+    <!-- =====================================================
+         SCANNER
+    ====================================================== -->
+
+    <linearGradient id="scannerGradient"
+                    x1="0"
+                    y1="0"
+                    x2="1"
+                    y2="0">
+
+      <stop offset="0%"
+            stop-color="#06B6D4"
+            stop-opacity="0"/>
+
+      <stop offset="50%"
+            stop-color="#2563EB"
+            stop-opacity=".8"/>
+
+      <stop offset="100%"
+            stop-color="#7C3AED"
+            stop-opacity="0"/>
+
+    </linearGradient>
+
+
+    <!-- =====================================================
+         PROFILE IMAGE CLIP
+    ====================================================== -->
+
+    <clipPath id="profileClip">
+
+      <circle
+        cx="930"
+        cy="235"
+        r="108"/>
+
+    </clipPath>
+
+
+    <!-- =====================================================
+         HERO CLIP
+    ====================================================== -->
+
+    <clipPath id="heroClip">
+
+      <rect
+        x="0"
+        y="0"
+        width="1200"
+        height="720"
+        rx="28"/>
+
+    </clipPath>
+
+
+    <!-- =====================================================
+         NAME SHADOW
+    ====================================================== -->
+
+    <filter id="nameShadow"
+            x="-30%"
+            y="-30%"
+            width="160%"
+            height="160%">
+
+      <feDropShadow
+        dx="0"
+        dy="6"
+        stdDeviation="5"
+        flood-color="#2563EB"
+        flood-opacity=".18"/>
+
     </filter>
 
-    <!-- Rounded clipping -->
-    <clipPath id="clip">
-      <rect width="1200" height="650" rx="30"/>
-    </clipPath>
+
+    <!-- =====================================================
+         CARD SHADOW
+    ====================================================== -->
+
+    <filter id="cardShadow"
+            x="-30%"
+            y="-30%"
+            width="160%"
+            height="160%">
+
+      <feDropShadow
+        dx="0"
+        dy="10"
+        stdDeviation="18"
+        flood-color="#0F172A"
+        flood-opacity=".10"/>
+
+    </filter>
+
+
+    <!-- =====================================================
+         SOFT GLOW
+    ====================================================== -->
+
+    <filter id="softGlow">
+
+      <feGaussianBlur
+        stdDeviation="5"
+        result="blur"/>
+
+      <feMerge>
+
+        <feMergeNode in="blur"/>
+
+        <feMergeNode in="SourceGraphic"/>
+
+      </feMerge>
+
+    </filter>
 
   </defs>
 
@@ -55,39 +220,71 @@
 
   <rect
     width="1200"
-    height="650"
-    rx="30"
-    fill="url(#bg)"
-  />
+    height="720"
+    rx="28"
+    fill="url(#background)"/>
 
 
   <!-- =====================================================
-       GRID
+       BACKGROUND DECORATION
+  ====================================================== -->
+
+  <circle
+    cx="1120"
+    cy="40"
+    r="170"
+    fill="#DBEAFE"
+    opacity=".45">
+
+    <animate
+      attributeName="r"
+      values="160;180;160"
+      dur="8s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+
+  <circle
+    cx="40"
+    cy="680"
+    r="140"
+    fill="#E0F2FE"
+    opacity=".45">
+
+    <animate
+      attributeName="r"
+      values="130;150;130"
+      dur="7s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+
+  <!-- =====================================================
+       SUBTLE GRID
   ====================================================== -->
 
   <g
-    stroke="#64748B"
+    stroke="#CBD5E1"
     stroke-width="1"
-    opacity=".08">
+    opacity=".14">
 
-    <path d="M0 100H1200"/>
-    <path d="M0 200H1200"/>
-    <path d="M0 300H1200"/>
-    <path d="M0 400H1200"/>
-    <path d="M0 500H1200"/>
-    <path d="M0 600H1200"/>
+    <path d="M0 120 H1200"/>
+    <path d="M0 240 H1200"/>
+    <path d="M0 360 H1200"/>
+    <path d="M0 480 H1200"/>
+    <path d="M0 600 H1200"/>
 
-    <path d="M100 0V650"/>
-    <path d="M200 0V650"/>
-    <path d="M300 0V650"/>
-    <path d="M400 0V650"/>
-    <path d="M500 0V650"/>
-    <path d="M600 0V650"/>
-    <path d="M700 0V650"/>
-    <path d="M800 0V650"/>
-    <path d="M900 0V650"/>
-    <path d="M1000 0V650"/>
-    <path d="M1100 0V650"/>
+    <path d="M120 0 V720"/>
+    <path d="M240 0 V720"/>
+    <path d="M360 0 V720"/>
+    <path d="M480 0 V720"/>
+    <path d="M600 0 V720"/>
+    <path d="M720 0 V720"/>
+    <path d="M840 0 V720"/>
+    <path d="M960 0 V720"/>
+    <path d="M1080 0 V720"/>
 
   </g>
 
@@ -96,88 +293,127 @@
        TERMINAL
   ====================================================== -->
 
-  <g font-family="monospace">
+  <rect
+    x="55"
+    y="38"
+    width="530"
+    height="42"
+    rx="12"
+    fill="#F1F5F9"
+    stroke="#E2E8F0"/>
 
-    <text
-      x="60"
-      y="65"
-      font-size="20"
-      fill="#61DAFB">
 
-      jali@frontend:~$
+  <circle
+    cx="77"
+    cy="59"
+    r="5"
+    fill="#EF4444"/>
 
-    </text>
 
-    <text
-      x="280"
-      y="65"
-      font-size="20"
-      fill="#E2E8F0"
-      opacity="0">
+  <circle
+    cx="94"
+    cy="59"
+    r="5"
+    fill="#F59E0B"/>
 
-      whoami
 
-      <animate
-        attributeName="opacity"
-        from="0"
-        to="1"
-        dur="1s"
-        begin="1s"
-        fill="freeze"/>
+  <circle
+    cx="111"
+    cy="59"
+    r="5"
+    fill="#22C55E"/>
 
-    </text>
 
-    <!-- Blinking cursor -->
+  <text
+    x="135"
+    y="65"
+    font-family="monospace"
+    font-size="14"
+    fill="#475569">
 
-    <rect
-      x="365"
-      y="45"
-      width="9"
-      height="25"
-      fill="#61DAFB">
+    jali@frontend:~$ whoami
 
-      <animate
-        attributeName="opacity"
-        values="1;0;1"
-        dur="1s"
-        repeatCount="indefinite"/>
+  </text>
 
-    </rect>
 
-  </g>
+  <rect
+    x="351"
+    y="48"
+    width="7"
+    height="19"
+    fill="#2563EB">
+
+    <animate
+      attributeName="opacity"
+      values="1;0;1"
+      dur="1s"
+      repeatCount="indefinite"/>
+
+  </rect>
 
 
   <!-- =====================================================
-       NAME
+       MAIN NAME
   ====================================================== -->
 
   <text
-    x="60"
+    x="58"
     y="150"
     font-family="Arial, Helvetica, sans-serif"
-    font-size="68"
-    font-weight="700"
+    font-size="66"
+    font-weight="800"
+    letter-spacing="1"
     fill="url(#nameGradient)"
+    filter="url(#nameShadow)"
     opacity="0">
 
     JALI KAR
 
     <animate
       attributeName="opacity"
-      from="0"
-      to="1"
-      dur="1s"
-      begin="2s"
+      values="0;1"
+      dur=".8s"
+      begin=".5s"
       fill="freeze"/>
 
     <animate
       attributeName="x"
-      values="30;60"
-      dur="1s"
-      begin="2s"
+      values="40;58"
+      dur=".8s"
+      begin=".5s"
       fill="freeze"/>
 
   </text>
+
+
+  <!-- =====================================================
+       NAME UNDERLINE
+  ====================================================== -->
+
+  <rect
+    x="60"
+    y="166"
+    width="210"
+    height="3"
+    rx="2"
+    fill="url(#blueGradient)"
+    opacity="0">
+
+    <animate
+      attributeName="opacity"
+      values="0;1"
+      dur=".6s"
+      begin="1.2s"
+      fill="freeze"/>
+
+    <animate
+      attributeName="width"
+      values="0;210"
+      dur=".8s"
+      begin="1.2s"
+      fill="freeze"/>
+
+  </rect>
 
 
   <!-- =====================================================
@@ -185,86 +421,189 @@
   ====================================================== -->
 
   <text
-    x="64"
-    y="195"
+    x="60"
+    y="205"
     font-family="Arial, Helvetica, sans-serif"
-    font-size="25"
-    fill="#E2E8F0"
+    font-size="22"
+    font-weight="700"
+    fill="#0F172A"
     opacity="0">
 
     SENIOR FRONTEND DEVELOPER
 
     <animate
       attributeName="opacity"
-      from="0"
-      to="1"
-      dur="1s"
-      begin="2.8s"
+      values="0;1"
+      dur=".7s"
+      begin="1.3s"
       fill="freeze"/>
 
   </text>
 
 
   <!-- =====================================================
-       DESCRIPTION
+       TECHNOLOGY
   ====================================================== -->
 
   <text
-    x="64"
-    y="235"
+    x="60"
+    y="233"
     font-family="Arial, Helvetica, sans-serif"
-    font-size="17"
-    fill="#94A3B8"
+    font-size="15"
+    fill="#64748B"
     opacity="0">
 
-    Building scalable enterprise frontend applications.
+    Angular • TypeScript • SAP Spartacus
 
     <animate
       attributeName="opacity"
-      from="0"
-      to="1"
-      dur="1s"
-      begin="3.4s"
+      values="0;1"
+      dur=".7s"
+      begin="1.6s"
       fill="freeze"/>
 
   </text>
 
 
   <!-- =====================================================
-       TECHNOLOGY PILLS
+       EXPERIENCE BADGE
+  ====================================================== -->
+
+  <rect
+    x="60"
+    y="258"
+    width="185"
+    height="38"
+    rx="19"
+    fill="#EFF6FF"
+    stroke="#BFDBFE"
+    opacity="0">
+
+    <animate
+      attributeName="opacity"
+      values="0;1"
+      dur=".6s"
+      begin="1.9s"
+      fill="freeze"/>
+
+  </rect>
+
+
+  <circle
+    cx="80"
+    cy="277"
+    r="5"
+    fill="#2563EB"/>
+
+
+  <text
+    x="94"
+    y="282"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13"
+    font-weight="700"
+    fill="#1D4ED8">
+
+    8+ YEARS EXPERIENCE
+
+  </text>
+
+
+  <!-- =====================================================
+       SUMMARY
+  ====================================================== -->
+
+  <text
+    x="60"
+    y="332"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="15"
+    fill="#475569">
+
+    Building scalable enterprise frontend applications
+
+  </text>
+
+
+  <text
+    x="60"
+    y="356"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="15"
+    fill="#475569">
+
+    with architecture, performance and accessibility in mind.
+
+  </text>
+
+
+  <!-- =====================================================
+       FLOATING QUOTE
+  ====================================================== -->
+
+  <g>
+
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="0 0; 0 -7; 0 0"
+      dur="4s"
+      repeatCount="indefinite"/>
+
+
+    <rect
+      x="60"
+      y="382"
+      width="390"
+      height="45"
+      rx="22"
+      fill="url(#quoteGradient)"
+      stroke="#DCE6F4"
+      filter="url(#softGlow)"/>
+
+
+    <text
+      x="255"
+      y="410"
+      text-anchor="middle"
+      font-family="monospace"
+      font-size="13"
+      font-weight="700"
+      fill="#475569">
+
+      KEEP CODING • KEEP GROWING
+
+    </text>
+
+  </g>
+
+
+  <!-- =====================================================
+       TECH PILLS
   ====================================================== -->
 
   <g
     font-family="Arial, Helvetica, sans-serif"
-    font-size="14">
+    font-size="11"
+    font-weight="700">
+
 
     <!-- Angular -->
 
     <rect
       x="60"
-      y="270"
-      width="110"
-      height="38"
-      rx="19"
-      fill="#172033"
-      stroke="#DD0031"
-      opacity="0">
-
-      <animate
-        attributeName="opacity"
-        from="0"
-        to="1"
-        dur=".5s"
-        begin="4s"
-        fill="freeze"/>
-
-    </rect>
+      y="448"
+      width="92"
+      height="30"
+      rx="15"
+      fill="#FFF1F2"
+      stroke="#FECDD3"/>
 
     <text
-      x="115"
-      y="294"
+      x="106"
+      y="468"
       text-anchor="middle"
-      fill="#FCA5A5">
+      fill="#BE123C">
 
       Angular
 
@@ -274,65 +613,21 @@
     <!-- TypeScript -->
 
     <rect
-      x="180"
-      y="270"
-      width="125"
-      height="38"
-      rx="19"
-      fill="#172033"
-      stroke="#3178C6"
-      opacity="0">
-
-      <animate
-        attributeName="opacity"
-        from="0"
-        to="1"
-        dur=".5s"
-        begin="4.2s"
-        fill="freeze"/>
-
-    </rect>
+      x="160"
+      y="448"
+      width="105"
+      height="30"
+      rx="15"
+      fill="#EFF6FF"
+      stroke="#BFDBFE"/>
 
     <text
-      x="242"
-      y="294"
+      x="212"
+      y="468"
       text-anchor="middle"
-      fill="#93C5FD">
+      fill="#1D4ED8">
 
       TypeScript
-
-    </text>
-
-
-    <!-- JavaScript -->
-
-    <rect
-      x="315"
-      y="270"
-      width="125"
-      height="38"
-      rx="19"
-      fill="#172033"
-      stroke="#F7DF1E"
-      opacity="0">
-
-      <animate
-        attributeName="opacity"
-        from="0"
-        to="1"
-        dur=".5s"
-        begin="4.4s"
-        fill="freeze"/>
-
-    </rect>
-
-    <text
-      x="377"
-      y="294"
-      text-anchor="middle"
-      fill="#FDE68A">
-
-      JavaScript
 
     </text>
 
@@ -340,32 +635,43 @@
     <!-- RxJS -->
 
     <rect
-      x="450"
-      y="270"
-      width="95"
-      height="38"
-      rx="19"
-      fill="#172033"
-      stroke="#B91C1C"
-      opacity="0">
-
-      <animate
-        attributeName="opacity"
-        from="0"
-        to="1"
-        dur=".5s"
-        begin="4.6s"
-        fill="freeze"/>
-
-    </rect>
+      x="273"
+      y="448"
+      width="72"
+      height="30"
+      rx="15"
+      fill="#F5F3FF"
+      stroke="#DDD6FE"/>
 
     <text
-      x="497"
-      y="294"
+      x="309"
+      y="468"
       text-anchor="middle"
-      fill="#FCA5A5">
+      fill="#6D28D9">
 
       RxJS
+
+    </text>
+
+
+    <!-- NgRx -->
+
+    <rect
+      x="353"
+      y="448"
+      width="72"
+      height="30"
+      rx="15"
+      fill="#F5F3FF"
+      stroke="#DDD6FE"/>
+
+    <text
+      x="389"
+      y="468"
+      text-anchor="middle"
+      fill="#6D28D9">
+
+      NgRx
 
     </text>
 
@@ -373,30 +679,19 @@
     <!-- SAP -->
 
     <rect
-      x="555"
-      y="270"
-      width="145"
-      height="38"
-      rx="19"
-      fill="#172033"
-      stroke="#38BDF8"
-      opacity="0">
-
-      <animate
-        attributeName="opacity"
-        from="0"
-        to="1"
-        dur=".5s"
-        begin="4.8s"
-        fill="freeze"/>
-
-    </rect>
+      x="433"
+      y="448"
+      width="125"
+      height="30"
+      rx="15"
+      fill="#ECFEFF"
+      stroke="#A5F3FC"/>
 
     <text
-      x="627"
-      y="294"
+      x="495"
+      y="468"
       text-anchor="middle"
-      fill="#7DD3FC">
+      fill="#0E7490">
 
       SAP Spartacus
 
@@ -406,138 +701,250 @@
 
 
   <!-- =====================================================
-       ARCHITECTURE CARD
+       ENGINEERING IMPACT TITLE
+  ====================================================== -->
+
+  <text
+    x="60"
+    y="515"
+    font-family="monospace"
+    font-size="11"
+    font-weight="700"
+    fill="#2563EB">
+
+    ENGINEERING IMPACT
+
+  </text>
+
+
+  <!-- =====================================================
+       METRIC 1
   ====================================================== -->
 
   <rect
     x="60"
-    y="345"
-    width="640"
-    height="220"
-    rx="20"
-    fill="url(#glass)"
-    stroke="#26354F"
-    opacity="0">
-
-    <animate
-      attributeName="opacity"
-      from="0"
-      to="1"
-      dur="1s"
-      begin="5.2s"
-      fill="freeze"/>
-
-  </rect>
-
-
-  <text
-    x="90"
-    y="385"
-    font-family="monospace"
-    font-size="16"
-    fill="#61DAFB">
-
-    &gt; FRONTEND ARCHITECTURE
-
-  </text>
-
-
-  <g
-    font-family="Arial, Helvetica, sans-serif"
-    font-size="14"
-    fill="#E2E8F0">
-
-    <text x="90" y="425">
-      UI
-    </text>
-
-    <text x="150" y="425">
-      →
-    </text>
-
-    <text x="180" y="425">
-      Components
-    </text>
-
-    <text x="300" y="425">
-      →
-    </text>
-
-    <text x="330" y="425">
-      Facade
-    </text>
-
-    <text x="410" y="425">
-      →
-    </text>
-
-    <text x="440" y="425">
-      State
-    </text>
-
-    <text x="510" y="425">
-      →
-    </text>
-
-    <text x="540" y="425">
-      API
-    </text>
-
-  </g>
-
-
-  <line
-    x1="90"
-    y1="445"
-    x2="650"
-    y2="445"
-    stroke="#334155"/>
-
-
-  <text
-    x="90"
-    y="480"
-    font-family="monospace"
-    font-size="14"
-    fill="#94A3B8">
-
-    Reusable Components
-
-  </text>
-
-
-  <text
-    x="90"
-    y="505"
-    font-family="monospace"
-    font-size="14"
-    fill="#94A3B8">
-
-    State Management
-
-  </text>
-
-
-  <text
-    x="90"
     y="530"
-    font-family="monospace"
-    font-size="14"
-    fill="#94A3B8">
+    width="120"
+    height="82"
+    rx="15"
+    fill="#FFFFFF"
+    stroke="#E2E8F0"/>
 
-    API Integration
+
+  <text
+    x="78"
+    y="562"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="24"
+    font-weight="800"
+    fill="#2563EB">
+
+    15+
 
   </text>
 
 
-  <!-- Online indicator -->
+  <text
+    x="78"
+    y="585"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    fill="#64748B">
+
+    reusable UI
+
+  </text>
+
+
+  <text
+    x="78"
+    y="601"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    fill="#64748B">
+
+    components
+
+  </text>
+
+
+  <!-- =====================================================
+       METRIC 2
+  ====================================================== -->
+
+  <rect
+    x="192"
+    y="530"
+    width="120"
+    height="82"
+    rx="15"
+    fill="#FFFFFF"
+    stroke="#E2E8F0"/>
+
+
+  <text
+    x="210"
+    y="562"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="24"
+    font-weight="800"
+    fill="#7C3AED">
+
+    40%
+
+  </text>
+
+
+  <text
+    x="210"
+    y="585"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    fill="#64748B">
+
+    load-time
+
+  </text>
+
+
+  <text
+    x="210"
+    y="601"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    fill="#64748B">
+
+    improvement
+
+  </text>
+
+
+  <!-- =====================================================
+       METRIC 3
+  ====================================================== -->
+
+  <rect
+    x="324"
+    y="530"
+    width="120"
+    height="82"
+    rx="15"
+    fill="#FFFFFF"
+    stroke="#E2E8F0"/>
+
+
+  <text
+    x="342"
+    y="562"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="24"
+    font-weight="800"
+    fill="#0891B2">
+
+    10+
+
+  </text>
+
+
+  <text
+    x="342"
+    y="585"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    fill="#64748B">
+
+    REST API
+
+  </text>
+
+
+  <text
+    x="342"
+    y="601"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    fill="#64748B">
+
+    integrations
+
+  </text>
+
+
+  <!-- =====================================================
+       METRIC 4
+  ====================================================== -->
+
+  <rect
+    x="456"
+    y="530"
+    width="120"
+    height="82"
+    rx="15"
+    fill="#FFFFFF"
+    stroke="#E2E8F0"/>
+
+
+  <text
+    x="474"
+    y="562"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="24"
+    font-weight="800"
+    fill="#16A34A">
+
+    WCAG
+
+  </text>
+
+
+  <text
+    x="474"
+    y="585"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    fill="#64748B">
+
+    accessible
+
+  </text>
+
+
+  <text
+    x="474"
+    y="601"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    fill="#64748B">
+
+    applications
+
+  </text>
+
+
+  <!-- =====================================================
+       RIGHT PROFILE CARD
+  ====================================================== -->
+
+  <rect
+    x="650"
+    y="38"
+    width="495"
+    height="574"
+    rx="28"
+    fill="url(#cardGradient)"
+    stroke="#E2E8F0"
+    filter="url(#cardShadow)"/>
+
+
+  <!-- =====================================================
+       CARD HEADER
+  ====================================================== -->
 
   <circle
-    cx="620"
-    cy="520"
+    cx="683"
+    cy="70"
     r="5"
-    fill="#22C55E"
-    filter="url(#glow)">
+    fill="#22C55E">
 
     <animate
       attributeName="opacity"
@@ -548,142 +955,408 @@
   </circle>
 
 
+  <text
+    x="698"
+    y="75"
+    font-family="monospace"
+    font-size="11"
+    font-weight="700"
+    fill="#64748B">
+
+    FRONTEND ENGINEERING SYSTEM ONLINE
+
+  </text>
+
+
   <!-- =====================================================
-       DEVELOPER CARD
+       PROFILE IMAGE RING
   ====================================================== -->
 
-  <rect
-    x="735"
-    y="110"
-    width="405"
-    height="455"
-    rx="24"
-    fill="#0B1220"
-    stroke="#26354F"/>
+  <circle
+    cx="897"
+    cy="225"
+    r="126"
+    fill="#EFF6FF"/>
 
-
-  <!-- Avatar circle -->
 
   <circle
-    cx="937"
-    cy="240"
-    r="105"
-    fill="#111C30"
-    stroke="#61DAFB"
-    stroke-width="2">
+    cx="897"
+    cy="225"
+    r="122"
+    fill="none"
+    stroke="url(#blueGradient)"
+    stroke-width="4"
+    stroke-dasharray="18 9"
+    filter="url(#softGlow)">
 
     <animate
-      attributeName="r"
-      values="100;108;100"
-      dur="3s"
+      attributeName="stroke-dashoffset"
+      values="0;-108"
+      dur="5s"
       repeatCount="indefinite"/>
 
   </circle>
 
 
-  <!-- Simple developer icon -->
+  <!-- =====================================================
+       PROFILE IMAGE
 
-  <circle
-    cx="937"
-    cy="220"
-    r="42"
-    fill="#1E293B"
-    stroke="#8B5CF6"
-    stroke-width="2"/>
+       IMPORTANT:
+       Keep profile.png inside assets folder.
+  ====================================================== -->
 
-
-  <path
-    d="M900 290 Q937 255 974 290"
-    fill="none"
-    stroke="#8B5CF6"
-    stroke-width="10"
-    stroke-linecap="round"/>
+  <image
+    x="789"
+    y="117"
+    width="216"
+    height="216"
+    href="profile.png"
+    preserveAspectRatio="xMidYMid slice"
+    clip-path="url(#profileClip)"/>
 
 
-  <!-- Developer name -->
+  <!-- =====================================================
+       IMAGE SCANNER
+  ====================================================== -->
+
+  <rect
+    x="789"
+    y="117"
+    width="216"
+    height="4"
+    fill="url(#scannerGradient)"
+    opacity=".75">
+
+    <animate
+      attributeName="y"
+      values="117;333;117"
+      dur="4s"
+      repeatCount="indefinite"/>
+
+  </rect>
+
+
+  <!-- =====================================================
+       PROFILE NAME
+  ====================================================== -->
 
   <text
-    x="937"
+    x="897"
     y="390"
     text-anchor="middle"
     font-family="Arial, Helvetica, sans-serif"
-    font-size="25"
-    font-weight="700"
-    fill="#F8FAFC">
+    font-size="30"
+    font-weight="800"
+    letter-spacing="1"
+    fill="#0F172A"
+    filter="url(#nameShadow)">
 
     JALI KAR
 
-  </text>
-
-
-  <text
-    x="937"
-    y="420"
-    text-anchor="middle"
-    font-family="monospace"
-    font-size="14"
-    fill="#61DAFB">
-
-    SENIOR FRONTEND ENGINEER
-
-  </text>
-
-
-  <text
-    x="937"
-    y="460"
-    text-anchor="middle"
-    font-family="monospace"
-    font-size="13"
-    fill="#64748B">
-
-    BUILD • ARCHITECT • LEARN
-
-  </text>
-
-
-  <!-- Status -->
-
-  <circle
-    cx="825"
-    cy="505"
-    r="5"
-    fill="#22C55E"
-    filter="url(#glow)"/>
-
-
-  <text
-    x="840"
-    y="510"
-    font-family="monospace"
-    font-size="13"
-    fill="#94A3B8">
-
-    SYSTEM ONLINE
+    <animate
+      attributeName="opacity"
+      values=".85;1;.85"
+      dur="3s"
+      repeatCount="indefinite"/>
 
   </text>
 
 
   <!-- =====================================================
-       SCANNER
+       ROLE
   ====================================================== -->
 
-  <g clip-path="url(#clip)">
+  <text
+    x="897"
+    y="419"
+    text-anchor="middle"
+    font-family="monospace"
+    font-size="12"
+    font-weight="700"
+    fill="#2563EB">
+
+    SENIOR FRONTEND DEVELOPER
+
+  </text>
+
+
+  <!-- =====================================================
+       COMPANY / DOMAIN
+  ====================================================== -->
+
+  <text
+    x="897"
+    y="446"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="12"
+    fill="#64748B">
+
+    IBM • SAP COMPOSABLE STOREFRONT
+
+  </text>
+
+
+  <!-- =====================================================
+       PROFILE STATUS
+  ====================================================== -->
+
+  <rect
+    x="738"
+    y="475"
+    width="318"
+    height="42"
+    rx="21"
+    fill="#F8FAFC"
+    stroke="#E2E8F0"/>
+
+
+  <circle
+    cx="763"
+    cy="496"
+    r="5"
+    fill="#22C55E"/>
+
+
+  <text
+    x="780"
+    y="501"
+    font-family="monospace"
+    font-size="11"
+    fill="#475569">
+
+    ARCHITECTURE • PERFORMANCE • QUALITY
+
+  </text>
+
+
+  <!-- =====================================================
+       EXPERIENCE
+  ====================================================== -->
+
+  <text
+    x="897"
+    y="550"
+    text-anchor="middle"
+    font-family="monospace"
+    font-size="10"
+    fill="#94A3B8">
+
+    IBM • PARAMINFO • INFOSYS • SHOPWEB
+
+  </text>
+
+
+  <text
+    x="897"
+    y="574"
+    text-anchor="middle"
+    font-family="monospace"
+    font-size="10"
+    fill="#94A3B8">
+
+    ANGULAR • TYPESCRIPT • RXJS • CI/CD • WCAG
+
+  </text>
+
+
+  <!-- =====================================================
+       BOTTOM ARCHITECTURE BAR
+  ====================================================== -->
+
+  <rect
+    x="650"
+    y="630"
+    width="495"
+    height="45"
+    rx="15"
+    fill="#FFFFFF"
+    stroke="#E2E8F0"/>
+
+
+  <text
+    x="673"
+    y="658"
+    font-family="monospace"
+    font-size="11"
+    fill="#2563EB">
+
+    UI
+
+  </text>
+
+
+  <text
+    x="698"
+    y="658"
+    font-family="monospace"
+    font-size="11"
+    fill="#94A3B8">
+
+    →
+
+  </text>
+
+
+  <text
+    x="716"
+    y="658"
+    font-family="monospace"
+    font-size="11"
+    fill="#475569">
+
+    Components
+
+  </text>
+
+
+  <text
+    x="790"
+    y="658"
+    font-family="monospace"
+    font-size="11"
+    fill="#94A3B8">
+
+    →
+
+  </text>
+
+
+  <text
+    x="808"
+    y="658"
+    font-family="monospace"
+    font-size="11"
+    fill="#475569">
+
+    State
+
+  </text>
+
+
+  <text
+    x="855"
+    y="658"
+    font-family="monospace"
+    font-size="11"
+    fill="#94A3B8">
+
+    →
+
+  </text>
+
+
+  <text
+    x="873"
+    y="658"
+    font-family="monospace"
+    font-size="11"
+    fill="#475569">
+
+    APIs
+
+  </text>
+
+
+  <text
+    x="920"
+    y="658"
+    font-family="monospace"
+    font-size="11"
+    fill="#94A3B8">
+
+    →
+
+  </text>
+
+
+  <text
+    x="938"
+    y="658"
+    font-family="monospace"
+    font-size="11"
+    fill="#475569">
+
+    CI/CD
+
+  </text>
+
+
+  <!-- =====================================================
+       FLOATING PARTICLES
+  ====================================================== -->
+
+  <circle
+    cx="610"
+    cy="140"
+    r="3"
+    fill="#2563EB"
+    opacity=".5">
+
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="0 0; 8 -15; 0 0"
+      dur="4s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+
+  <circle
+    cx="620"
+    cy="170"
+    r="2"
+    fill="#7C3AED"
+    opacity=".5">
+
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="0 0; -8 -12; 0 0"
+      dur="5s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+
+  <circle
+    cx="610"
+    cy="400"
+    r="3"
+    fill="#06B6D4"
+    opacity=".45">
+
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="0 0; 10 10; 0 0"
+      dur="4s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+
+  <!-- =====================================================
+       FULL HERO SCANNER
+  ====================================================== -->
+
+  <g clip-path="url(#heroClip)">
 
     <rect
       x="0"
-      y="-10"
+      y="-5"
       width="1200"
-      height="4"
-      fill="url(#scanner)"
-      filter="url(#glow)">
+      height="3"
+      fill="url(#scannerGradient)"
+      opacity=".25">
 
       <animate
         attributeName="y"
-        from="-10"
-        to="650"
-        dur="3.5s"
-        begin="6s"
+        from="-5"
+        to="720"
+        dur="7s"
+        begin="3s"
         repeatCount="indefinite"/>
 
     </rect>
@@ -692,19 +1365,16 @@
 
 
   <!-- =====================================================
-       FOOTER
+       OUTER BORDER
   ====================================================== -->
 
-  <text
-    x="60"
-    y="610"
-    font-family="monospace"
-    font-size="13"
-    fill="#475569">
-
-    jali@frontend:~$ build --scalable --accessible --maintainable
-
-  </text>
-
+  <rect
+    x="1"
+    y="1"
+    width="1198"
+    height="718"
+    rx="28"
+    fill="none"
+    stroke="#E2E8F0"/>
 
 </svg>
